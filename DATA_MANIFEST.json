@@ -1,0 +1,22 @@
+{
+  "data/activity/processed/data.pt": {
+    "bytes": 16501341,
+    "sha256": "99131e95e612cc354cab3466e12793eb6c7b68460a386157db02509905a160aa"
+  },
+  "TPP/taxi/train.pkl": {
+    "bytes": 2321315,
+    "sha256": "117dd6a2353560bbc84958d8f281180c1105ef6ecbf951cd6886d009876a381f"
+  },
+  "TPP/taxi/dev.pkl": {
+    "bytes": 328247,
+    "sha256": "59c8bfbf0cd497bc228e47c8e922ecfcddf0843055353ddb29acf9029a2ba0ac"
+  },
+  "TPP/taxi/test.pkl": {
+    "bytes": 657341,
+    "sha256": "daf934deba73ee580672d4d6fe3d78120fdb7f27d4a114e7467a66288b575f33"
+  },
+  "Generation/itspm_generation/table1_data/mujoco_training_36.pt": {
+    "bytes": 18629494,
+    "sha256": "f09a8049a2cef762c750d7944cbbe7701729ee6fd1341ac5695655897831a847"
+  }
+}

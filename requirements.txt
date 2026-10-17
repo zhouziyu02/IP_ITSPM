@@ -1,0 +1,14 @@
+# Install a matched torch/torchvision pair for your CUDA version first.
+# On Colab, retain its preinstalled pair.
+torch>=2.1
+torchvision>=0.16
+numpy>=1.26,<3
+scipy>=1.10
+scikit-learn>=1.3
+pandas>=2
+matplotlib>=3.7
+einops>=0.7
+PyYAML>=6
+tqdm>=4.66
+packaging>=24
+omegaconf==2.3.0

@@ -1,0 +1,14 @@
+{
+  "dataset": "MuJoCo HopperPhysics",
+  "provenance": "regenerated_physical_simulation",
+  "source": "TimeCraft: Diff-MN/datasets/mujoco_physics.py",
+  "source_license": "MIT",
+  "n_trajectories": 4620,
+  "seq_len": 36,
+  "channels": 14,
+  "data_seed": 123,
+  "dm_control_version": "1.0.46",
+  "mujoco_version": "3.13.0",
+  "sha256": "f09a8049a2cef762c750d7944cbbe7701729ee6fd1341ac5695655897831a847",
+  "note": "Original benchmark .pt was absent. New genuine physics trajectories; not a claim of bit-identical original data."
+}

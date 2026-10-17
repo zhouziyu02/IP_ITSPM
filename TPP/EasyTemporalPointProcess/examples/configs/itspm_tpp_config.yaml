@@ -1,0 +1,58 @@
+# Base Taxi configuration; taxi_config.py applies the launch settings.
+pipeline_config_id: runner_config
+data:
+  taxi:
+    data_format: pkl
+    train_dir: data/taxi/train.pkl
+    valid_dir: data/taxi/dev.pkl
+    test_dir: data/taxi/test.pkl
+    data_specs:
+      num_event_types: 10
+      pad_token_id: 10
+      padding_side: right
+      truncation_side: right
+ITSPM_train:
+  base_config:
+    stage: train
+    backend: torch
+    dataset_id: taxi
+    runner_id: std_tpp
+    model_id: ITSPM
+    base_dir: ./checkpoints_itspm_tpp/
+  trainer_config:
+    batch_size: 64
+    max_epoch: 2
+    shuffle: true
+    optimizer: adam
+    learning_rate: 0.0005
+    valid_freq: 1
+    use_tfb: false
+    metrics:
+    - acc
+    - rmse
+    seed: 2019
+    gpu: 0
+  model_config:
+    hidden_size: 64
+    num_layers: 1
+    num_heads: 2
+    loss_integral_num_sample_per_step: 8
+    dropout_rate: 0.1
+    model_specs:
+      window_size: 24
+      max_event_tokens: 24
+      max_gap_tokens: 12
+      n_mixer_layers: 1
+      n_heads: 2
+      head_type: decay_mlp
+      time_emb_size: 32
+    thinning:
+      num_seq: 10
+      num_sample: 1
+      num_exp: 100
+      look_ahead_time: 10
+      patience_counter: 5
+      over_sample_rate: 5
+      num_samples_boundary: 5
+      dtime_max: 5
+      num_step_gen: 1
